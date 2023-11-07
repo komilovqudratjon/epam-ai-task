@@ -2,6 +2,7 @@ package com.epam.upskil.controller;
 
 import com.epam.upskil.model.User;
 import com.epam.upskil.service.UserService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,14 +15,11 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/users")
+@AllArgsConstructor
 public class UserController {
 
     private final UserService userService;
 
-    @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     @PostMapping("/")
     public ResponseEntity<User> createUser(@RequestBody User user) {
@@ -44,6 +42,4 @@ public class UserController {
         userService.likePost(userId, postId);
         return ResponseEntity.ok().build();
     }
-
-    // Other endpoints as needed
 }

@@ -1,4 +1,4 @@
-package com.epam.upskil.config;
+package com.epam.upskill.task4.config;
 
 /**
  * @className: WebSecurityConfig  $
