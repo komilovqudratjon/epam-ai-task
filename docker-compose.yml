@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: local_postgres
+    ports:
+      - "5432:5432" # Map TCP port 5432 in the container to port 5432 on the Docker host.
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist data between container restarts
+
+  mongo:
+    image: mongo:latest
+    container_name: local_mongo
+    ports:
+      - "27017:27017" # Map TCP port 27017 in the container to port 27017 on the Docker host.
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo_user # replace with your username
+      MONGO_INITDB_ROOT_PASSWORD: mongo_password # replace with your password
+    volumes:
+      - mongo_data:/data/db # Persist data between container restarts
+
+volumes:
+  postgres_data: # Named volume for PostgreSQL
+  mongo_data: # Named volume for MongoDB
