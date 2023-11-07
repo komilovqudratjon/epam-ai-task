@@ -20,9 +20,9 @@ public class WeatherScheduler {
 
     private final WeatherService weatherService;
 
-    @Scheduled(fixedRate = 100000)
+    // every 24 hours
+    @Scheduled(cron = "0 0 0 * * ?")
     public void refreshWeatherData() {
-        // You might want to refresh weather data for all cities/zip codes stored in the database
-        // Iterate over them and call the third-party API for updates
+        weatherService.updateWeatherData();
     }
 }

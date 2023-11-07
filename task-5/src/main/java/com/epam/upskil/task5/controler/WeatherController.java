@@ -30,10 +30,5 @@ public class WeatherController {
         return new ResponseEntity<>(weatherData, HttpStatus.OK);
     }
 
-    @GetMapping("/zipcode/{zipcode}")
-    public ResponseEntity<WeatherData> getWeatherByZipCode(@PathVariable String zipcode) {
-        WeatherData weatherData = weatherService.getWeatherByZipCode(zipcode);
-        return new ResponseEntity<>(weatherData, HttpStatus.OK);
-    }
 }
 
