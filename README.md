@@ -66,6 +66,19 @@ __[(GPT) Weather Data Spring Integration](https://chat.openai.com/share/d48c2591
 - **Code Readiness**:
 - **Challenges Faced**:
 - **Learnings and Good Practices**:
+ 
+### Task 6: Social Media REST API
+
+__[(GPT) Weather Data Spring Integration](https://chat.openai.com/share/d48c2591-f187-479c-b6a7-1ee6e02c7427)__
+
+
+#### Feedback
+
+- **Ease of Completion**: The AI-generated code and instructions were straightforward and easy to follow. The explanations were clear, which made the task relatively simple.
+- **Time Taken**: It took me approximately 40 min to complete the task, including setting up the environment and dependencies.
+- **Code Readiness**:
+- **Challenges Faced**:
+- **Learnings and Good Practices**:
 
 
 
